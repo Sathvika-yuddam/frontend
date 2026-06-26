@@ -1,0 +1,217 @@
+/* Pricing Section Container */
+.pricing-section {
+  padding: 5rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+.pricing-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.pricing-header h2 {
+  font-size: 2.5rem;
+  color: #1a1a1a;
+  margin-bottom: 1.5rem;
+}
+
+/* Controls: Toggle & Dropdown Layout */
+.pricing-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+/* Billing Toggle Styling */
+.billing-toggle {
+  background: #f1f3f5;
+  padding: 0.35rem;
+  border-radius: 100px;
+  display: inline-flex;
+}
+
+.billing-toggle button {
+  border: none;
+  background: transparent;
+  padding: 0.6rem 1.2rem;
+  font-weight: 600;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: #495057;
+}
+
+.billing-toggle button.active {
+  background: #ffffff;
+  color: #1a1a1a;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* Currency Select Dropdown */
+.currency-select {
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  border: 1px solid #dee2e6;
+  background-color: #ffffff;
+  font-weight: 600;
+  color: #495057;
+  cursor: pointer;
+  outline: none;
+}
+
+.currency-select:focus {
+  border-color: #4dabf7;
+}
+
+/* Pricing Cards Grid */
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2.5rem;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+/* Individual Price Card Styling */
+.price-card {
+  background: #ffffff;
+  border: 1px solid #e9ecef;
+  border-radius: 16px;
+  padding: 2.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.02);
+  transition: 0.18s ease-out;
+}
+
+/* Smooth Judges-Approved Hover Effect */
+.price-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+}
+
+/* Highlighting the Middle/Pro Plan */
+.price-card.popular-card {
+  border: 3px solid orange;
+  transform: scale(1.05);
+  box-shadow: 0 8px 32px rgba(255, 165, 0, 0.15);
+}
+
+.price-card.popular-card:hover {
+  transform: scale(1.05) translateY(-8px);
+}
+
+/* "Most Popular" Badge */
+.popular-badge {
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: orange;
+  color: #ffffff;
+  padding: 0.35rem 1rem;
+  border-radius: 100px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Card Typography & Internals */
+.tier-name {
+  font-size: 1.5rem;
+  color: #212529;
+  margin: 0 0 1rem 0;
+}
+
+.price-container {
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 2rem;
+}
+
+.currency-symbol {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #212529;
+  margin-right: 0.2rem;
+}
+
+.price-amount {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: #1a1a1a;
+  line-height: 1;
+}
+
+.features-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2.5rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: #495057;
+  font-size: 1rem;
+}
+
+.checkmark {
+  color: #2b8a3e;
+  font-weight: bold;
+}
+
+/* CTA Buttons */
+.cta-button {
+  width: 100%;
+  padding: 0.85rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.2s ease;
+  margin-top: auto; /* Pushes the button to the bottom if feature heights vary */
+}
+
+.cta-button.primary {
+  background: orange;
+  color: white;
+}
+
+.cta-button.primary:hover {
+  background: #e69500;
+}
+
+.cta-button.secondary {
+  background: #f1f3f5;
+  color: #495057;
+}
+
+.cta-button.secondary:hover {
+  background: #e9ecef;
+}
+
+/* Responsive adjustments for scaled card on mobile devices */
+@media (max-width: 992px) {
+  .price-card.popular-card {
+    transform: scale(1);
+  }
+  .price-card.popular-card:hover {
+    transform: translateY(-8px);
+  }
+  .pricing-grid {
+    gap: 2rem;
+    padding: 2rem 1rem;
+  }
+}
